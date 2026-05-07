@@ -1,25 +1,28 @@
 # Riyadh Restaurants ML Project
 
 ## Project Overview
+
 This project applies Machine Learning techniques to classify restaurants in Riyadh into two categories:
 
-- Best Restaurant
-- Average Restaurant
+- Highly Rated Restaurant
+- Lower Rated Restaurant
 
-The project uses the Riyadh Restaurants (20K Records) dataset from Kaggle and applies Logistic Regression for restaurant classification.
+The project uses the Riyadh Restaurants (20K Records) dataset from Kaggle and applies a Logistic Regression model for restaurant classification.
 
 ---
 
 ## Dataset
-Dataset Name:
+
+### Dataset Name
 Riyadh Restaurants (20K Records)
 
-Dataset Source:
+### Dataset Source
 https://www.kaggle.com/datasets/fahd09/riyadh-restaurants-20k
 
 ---
 
 ## Features Used
+
 The following features were used for model training:
 
 - price
@@ -28,11 +31,12 @@ The following features were used for model training:
 - photos
 - ratingSignals
 
-The rating attribute was used only for creating the target variable and was excluded from the input features to avoid data leakage.
+The `rating` attribute was used only for creating the target variable and was excluded from the input features to avoid data leakage.
 
 ---
 
 ## Data Cleaning
+
 The preprocessing and cleaning process included:
 
 - Removing duplicated records
@@ -40,37 +44,44 @@ The preprocessing and cleaning process included:
 - Converting attributes into numeric format
 - Removing invalid and missing values
 
-After cleaning, the final dataset contained 7,294 records.
+After preprocessing and cleaning, the final dataset contained 7,294 records.
 
 ---
 
 ## Target Variable
+
 The target variable is called:
 
-Restaurant_Class
+`Restaurant_Class`
 
-Class labels:
-- 1 → Best Restaurant
-- 0 → Average Restaurant
+### Class Labels
+
+- 1 → Highly Rated Restaurant
+- 0 → Lower Rated Restaurant
 
 The threshold value was determined using the median rating of the dataset to create balanced classes for the classification task.
+
+Restaurants with ratings greater than or equal to the median rating were classified as Highly Rated Restaurants, while restaurants with ratings below the median rating were classified as Lower Rated Restaurants.
 
 ---
 
 ## Machine Learning Model
+
 The project uses:
 
 - Logistic Regression
 
 The dataset was divided into:
+
 - 80% training data
 - 20% testing data
 
-Stratified splitting was used to preserve class balance.
+Stratified splitting was used to preserve class balance between the training and testing datasets.
 
 ---
 
 ## Evaluation Metrics
+
 The model was evaluated using:
 
 - Accuracy
@@ -82,6 +93,7 @@ The model was evaluated using:
 ---
 
 ## Model Performance
+
 The Logistic Regression model achieved:
 
 - Accuracy: 85.7%
@@ -93,6 +105,7 @@ These results indicate strong classification performance for identifying highly-
 ---
 
 ## Tools and Technologies
+
 - Python
 - Google Colab
 - Pandas
