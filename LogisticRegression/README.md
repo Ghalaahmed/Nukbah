@@ -103,6 +103,19 @@ The Logistic Regression model achieved:
 These results indicate strong classification performance for identifying highly-rated restaurants.
 
 ---
+---
+
+## Model Performance
+
+The Decision Tree model achieved:
+
+- Accuracy: 73.5%
+- Precision: 73.7%
+- Recall: 73.6%
+
+These results indicate balanced classification performance with no overfitting.
+
+---
 
 ## Tools and Technologies
 
